@@ -13,10 +13,12 @@ userRouter.get('/user/api/shopping',(req,res,next)=>{
   return res.json(shopping.ShoppingItems);
 })
 
-userRouter.get('/user/api/job'),(req,res,next)=>{
+userRouter.get('/user/api/job',(req,res,next)=>{
+  
   console.log(req.url,req.method)
   return res.json(job.JobIems);
-}
+})
+
 
 userRouter.get('/user/api/notification',(req,res,next)=>{
   
