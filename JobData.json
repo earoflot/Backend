@@ -1,0 +1,53 @@
+{
+  "JobIems": [
+    {
+      "id": "001",
+      "image": "images/GH_A1.jpeg",
+      "title": "Ground Handling",
+      "description": "Ground handling is a vital part of the aviation industry that involves the services required to operate an aircraft while it's on the ground at an airport",
+      "updated": " Last updated 3 mins ago"
+    },
+    {
+      "id": "002",
+      "image": "images/RS_A1.avif",
+      "title": "Airport Retails Shops",
+      "description": "As a retail team member, you'll play a key role in engaging customers by promoting, advising on, and selling a wide range of exclusive tax and duty-free products.",
+      "updated": " Last updated 3 mins ago"
+    },
+    {
+      "id": "003",
+      "image": "images/ME_A1.jpeg",
+      "title": "Maintenance & Engineering",
+      "description": " A maintenance engineer is responsible for undertaking continuous routine maintenance on plants and machinery to ensure they run smoothly and reliably. They work with other professionals to improve efficiency and safety standards as well as organise repairs.",
+      "updated": " Last updated 3 mins ago"
+    },
+    {
+      "id": "004",
+      "image": "images/CC_A1.jpeg",
+      "title": "Cabin Crew",
+      "description": "Cabin crew also known as Flight Attendants provide in-flight services to ensure that airline passengers have a comfortable and smooth flying experience. Their duties include answering passengers’ questions, enforcing safety measures before, during and after takeoff and serving food and beverages during flights.",
+      "updated": " Last updated 3 mins ago"
+    },
+    {
+      "id": "005",
+      "image": "images/AS_A1.jpg",
+      "title": "Assist Service",
+      "description": "A assist services or Customer Service Representative provides a company’s customers with the service they require. Their duties include receiving inbound calls, responding to complaints and selling a company’s products or services.",
+      "updated": " Last updated 3 mins ago"
+    },
+    {
+      "id": "006",
+      "image": "images/SS_A1.jpeg",
+      "title": "Airport Security Officer",
+      "description": "The duties of an airport security employee may vary depending on their designation and specialisation. These professionals work in teams, with government officials and law enforcement agents to ensure the security and safety of passengers and personnel in an airport.",
+      "updated": " Last updated 3 mins ago"
+    },
+    {
+      "id": "007",
+      "image": "images/FW_A1.jpeg",
+      "title": "Airlines Food Service Worker",
+      "description": " Airline food service workers typically work in the galley of an aircraft, where they provide passengers with meals, and perform food preparation, sanitation, and stocking duties. They may also serve special meals for passengers with dietary needs.",
+      "updated": " Last updated 3 mins ago"
+    }
+  ]
+}
