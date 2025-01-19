@@ -1,0 +1,19 @@
+{
+  "homeItems": [
+    {
+      "id": "001",
+      "image1": "images/AI_H1.webp",
+      "title1": "Ground Handling",
+      "description1": "Ground handling is a vital part of the aviation industry that involves the services required to operate an aircraft while it's on the ground at an airport"
+    
+    },
+    {
+      "id": "002",
+      "image2": "images/AS_H1.webp",
+      "title2": "Airport Retails Shops",
+      "description2": "As a retail team member, you'll play a key role in engaging customers by promoting, advising on, and selling a wide range of exclusive tax and duty-free products."
+    }
+  
+  
+  ]
+}
