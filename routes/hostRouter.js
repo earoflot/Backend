@@ -1,8 +1,8 @@
 // External Module..........
 const express = require('express')
 
-const userData = require("../userData.json");
-const fs = require("fs");
+const userData = require("../userData.json")
+const fs = require('fs')
 
 
 
@@ -34,14 +34,11 @@ hostRouter.route("/api/host/:id").get((req,res) => {
 hostRouter.post('/api/host',(req,res) => {
   // Create new user
   //
-  const body = req.body;
-
-  userData.push({ ...body, id: userData.length + 1 });
-  fs.writeFile("../userData.json",JSON.stringify(userData),(err,data)=>{
-    return res.json({status: "Pending"})
-  })
-  
-  
+  const body = req.body
+  userData.push({ ...body, id: userData.length + 1 })
+  fs.writeFile("../Backend/userData.json",JSON.stringify(userData),(err,data)=>{
+    return res.json({status: "Success",id: userData.length})
+  }) 
 })
 
 module.exports = hostRouter;

@@ -1,0 +1,16 @@
+
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/shopping
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/shopping
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/shopping
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/job
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/notification
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/currentnotifs
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/home
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/job
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/notification
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/currentnotifs
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/home
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/notification
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/currentnotifs
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/home
+Date:2/6/2025, 1:49:10 PM,	Ip:::ffff:127.0.0.1,	Request:GET,	Path:/user/api/job
