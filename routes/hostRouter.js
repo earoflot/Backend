@@ -1,7 +1,7 @@
 // External Module..........
 const express = require('express')
 
-const userData = require("../MOCK_DATA.json");
+const userData = require("../userData.json");
 const fs = require("fs");
 
 
@@ -37,9 +37,9 @@ hostRouter.post('/api/host',(req,res) => {
   const body = req.body;
   console.log(body)
   userData.push(body);
-  fs.writeFile("../MOCK_DATA.json",JOSON.stringify(userData),(err,data)=>{
-    return res.json({status: "Pending"})
-  })
+  // fs.writeFile("../MOCK_DATA.json",JOSON.stringify(userData),(err,data)=>{
+  //   return res.json({status: "Pending"})
+  // })
   
   
 })
