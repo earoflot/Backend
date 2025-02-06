@@ -35,11 +35,11 @@ hostRouter.post('/api/host',(req,res) => {
   // Create new user
   //
   const body = req.body;
-  console.log(body)
-  userData.push(body);
-  // fs.writeFile("../MOCK_DATA.json",JOSON.stringify(userData),(err,data)=>{
-  //   return res.json({status: "Pending"})
-  // })
+
+  userData.push({ ...body, id: userData.length + 1 });
+  fs.writeFile("../userData.json",JSON.stringify(userData),(err,data)=>{
+    return res.json({status: "Pending"})
+  })
   
   
 })

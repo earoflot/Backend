@@ -8,7 +8,7 @@ const job = require("../JobData.json")
 const home = require("../homeData.json")
 const game = require("../FFgameData.json")
 
-const userData = require("../MOCK_DATA (1).json");
+
 
 const userRouter = express.Router();
 
