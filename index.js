@@ -2,17 +2,18 @@
 const express = require('express')
 // Local Module
 const userRouter = require('./routes/userRouter');
+const hostRouter = require('./routes/hostRouter');
+// Import Mongo DB Data base import external module
 const mongoose = require("mongoose");
-
 
 const app = express();
 
 
-
-
+// Middleware -- Plugin........
+app.use(express.urlencoded({ extended: false}));
 
 // Get a list Notification ;
-app.use(userRouter);
+app.use(userRouter,hostRouter);
 
 const port = process.env.PORT || 3000;
 

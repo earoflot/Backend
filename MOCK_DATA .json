@@ -68,34 +68,7 @@
     "last_name": "Odde",
     "email": "jodde9@xing.com",
     "gender": "Male"
-  },
-  {
-    "id": 11,
-    "first_name": "Torrin",
-    "last_name": "Menear",
-    "email": "tmeneara@google.es",
-    "gender": "Male"
-  },
-  {
-    "id": 12,
-    "first_name": "Berkeley",
-    "last_name": "Clutten",
-    "email": "bcluttenb@ask.com",
-    "gender": "Male"
-  },
-  {
-    "id": 13,
-    "first_name": "Geordie",
-    "last_name": "Wickens",
-    "email": "gwickensc@economist.com",
-    "gender": "Male"
-  },
-  {
-    "id": 14,
-    "first_name": "Maurizio",
-    "last_name": "Maltman",
-    "email": "mmaltmand@t-online.de",
-    "gender": "Male"
   }
+ 
  
 ]
