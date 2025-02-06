@@ -13,6 +13,9 @@ const game = require("../FFgameData.json")
 const userRouter = express.Router();
 
 userRouter.get('/user/api/shopping',(req,res,next)=>{
+  // Create a custum headers............
+  // Always add X to Custom headers..........
+  res.setHeader("X-Name","manisQaure");
   return res.json(shopping.ShoppingItems);
 })
 userRouter.get('/user/api/job',(req,res,next)=>{

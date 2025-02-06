@@ -14,6 +14,7 @@ const app = express();
 
 // Middleware -- Plugin........
 app.use(express.urlencoded({ extended: false}));
+app.use(express.json({ extended: false}));
 
 // Check the user Information in Middleware and create a Log file
 app.use((req,res,next) => {
