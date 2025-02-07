@@ -8,8 +8,37 @@ const userRouter = require('./routes/userRouter');
 const hostRouter = require('./routes/hostRouter');
 // Import Mongo DB Data base import external module
 const mongoose = require("mongoose");
+const { type } = require('os');
 
 const app = express();
+
+// Data Base Connection....
+mongoose.connect("mongodb://127.0.0.1:27017/loginUser_db").then(()=> console.log("MongoDB Connected")).catch((err) => console.log("Mongo Erro",err))
+
+// Data Base Schema..
+const userSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    require: true,
+  },
+  lastName: {
+    type: String,
+  },
+  email: {
+    type: String,
+    require: true,
+    unique: true,
+  },
+  gender: {
+    type: String,
+    require: true,
+  }
+})
+// Data Base Model.....
+const User = mongoose.model("user",userSchema);
+
+
+
 
 
 // Middleware -- Plugin........
