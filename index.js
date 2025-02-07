@@ -1,32 +1,34 @@
 // Import Core Module in filesystem............
 const fs = require('fs')
-
 // External Module
 const express = require('express')
-
-// // Local Module
+// // Local Module Router import Module..............
+// Host Module...........
+const hostRouter = require('./routes/hostRouter');
 const userRouter = require('./routes/userRouter');
 // Name Export module
-const hostRouter = require('./routes/hostRouter');
-
+// Import DataBase connection on mongodb module
 const { connectMongoDb } = require('./connection');
-
-
+// Import Middleware Module in name export
 const {logReqRes} = require("./middleware/index")
-// Import Mongo DB Data base import external module
 
+//.................................IMPORT MODULE.................................
 
+// Crate a server app in express
 const app = express();
 
-// Connection
+// Connection ON MONGO DB 
 connectMongoDb("mongodb://127.0.0.1:27017/loginUser").then(() => console.log("Mongodb Connected!"))
 
 // Middleware -- Plugin........
+// it is the log file and add the run time data..on the file
 app.use(express.urlencoded({ extended: false}));
 app.use(logReqRes("log.txt"))
 
-// Get a list Notification ;
+// Router use of host address initialise..........
+// host address .api.......
 app.use("/host",hostRouter);
+// user address api
 app.use(userRouter)
 
 

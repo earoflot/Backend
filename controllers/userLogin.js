@@ -1,7 +1,21 @@
-const userLogin = require("../models/user")
+// Local Module.......
+// find the value of mogodb data........
+const userLogin = require("../models/userLongin")
 
+//...............................IMPORT STYTMENT.........................
+// HTTP RESPONSE STATUS CODES
+// HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes.
+//
+// 1. Informational responses (100 -- 199)
+// 2. Successful responses (200 -- 299)
+// 3. Redirection messages (300 -- 399)
+// 4. Client error responses (400 -- 499)
+// 5. Server error respones (500 -- 599)
 
+// USERS ROUTERS..............
+// USERS ROUTERS..............
 
+// Create a async fucntion on awite to find the data on useLogin database
 async function handleGetAllUsers(req,res){
   const allDBlogin = await userLogin.find({})
   return res.json(allDBlogin)
@@ -14,12 +28,12 @@ async function handleGetUsersById(req,res){
  if(!userId)return res.status(404).json({erro: "User not found"})
  return res.json(userId)
 }
-
+// update the value of some changes on by id .........
 async function handleUpdateUserById(req,res){
    // Edit the user on with ID 
   //
   await userLogin.findByIdAndUpdate(req.params.id,{lastName: "Changed"})
-  return res.json({status: "Success Update"})
+  return res.json({status: "Success Update"})//Some error
 }
 
 async function handleDeleteUserById(req,res){
@@ -44,6 +58,7 @@ async function handleCreateNewUser(req,res){
   })
   return res.status(201).json({msg: "Success"})
 }
+// export all async function............
 module.exports = {
   handleGetAllUsers,
   handleGetUsersById,
