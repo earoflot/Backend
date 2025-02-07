@@ -3,58 +3,32 @@ const fs = require('fs')
 
 // External Module
 const express = require('express')
-// Local Module
+
+// // Local Module
 const userRouter = require('./routes/userRouter');
+// Name Export module
 const hostRouter = require('./routes/hostRouter');
+
+const { connectMongoDb } = require('./connection');
+
+
+const {logReqRes} = require("./middleware/index")
 // Import Mongo DB Data base import external module
-const mongoose = require("mongoose");
-const { type } = require('os');
+
 
 const app = express();
 
-// Data Base Connection....
-mongoose.connect("mongodb://127.0.0.1:27017/loginUser_db").then(()=> console.log("MongoDB Connected")).catch((err) => console.log("Mongo Erro",err))
-
-// Data Base Schema..
-const userSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    require: true,
-  },
-  lastName: {
-    type: String,
-  },
-  email: {
-    type: String,
-    require: true,
-    unique: true,
-  },
-  gender: {
-    type: String,
-    require: true,
-  }
-})
-// Data Base Model.....
-const User = mongoose.model("user",userSchema);
-
-
-
-
+// Connection
+connectMongoDb("mongodb://127.0.0.1:27017/loginUser").then(() => console.log("Mongodb Connected!"))
 
 // Middleware -- Plugin........
 app.use(express.urlencoded({ extended: false}));
-app.use(express.json({ extended: false}));
-
-// Check the user Information in Middleware and create a Log file
-app.use((req,res,next) => {
-  fs.appendFile("log.txt",`\nDate:${new Date().toLocaleString()},\tIp:${req.ip},\tRequest:${req.method},\tPath:${req.path}`,(err,data)=>{
-    next()
-  })
-
-})
+app.use(logReqRes("log.txt"))
 
 // Get a list Notification ;
-app.use(userRouter,hostRouter);
+app.use("/host",hostRouter);
+app.use(userRouter)
+
 
 const port = process.env.PORT || 3000;
 
