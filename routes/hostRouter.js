@@ -1,7 +1,8 @@
 // External Module..........
 const express = require('express')
 // Import the hendlers on routing request..........name export............
-const {handleGetAllUsers, handleGetUsersById, handleUpdateUserById, handleDeleteUserById, handleCreateNewUser} = require ("../controllers/userLogin")
+const {handleGetAllUsers, handleGetUsersById, handleUpdateUserById, handleDeleteUserById, handleCreateNewUser} = require ("../controllers/userLoginHandler")
+
 
 // Create a host router...
 const hostRouter = express.Router();

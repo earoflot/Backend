@@ -1,42 +1,32 @@
 // External Module..........
 const express = require('express')
 // Local Module........
-const notification = require("../NotificationData.json")
-const currentnotifs = require("../CurrentnotifsData.json")
-const shopping = require("../ShoppingData.json")
-const job = require("../JobData.json")
-const home = require("../homeData.json")
-const game = require("../FFgameData.json")
+const {handleGetAllNotifs,handleGetAllCrrnotifs} = require("../controllers/notifsHandler")
+const {handleGetAllShopping} = require("../controllers/shoppingHandler")
+const {handleGetAllJob} = require("../controllers/jobHandler")
+const {handleGetAllHome} = require("../controllers/homeHandler")
+const {handleGetAllGame} = require ("../controllers/gameHandler")
 
-
-
+// Router.......Create a userRouter...........
 const userRouter = express.Router();
 
-userRouter.get('/user/api/shopping',(req,res,next)=>{
-  // Create a custum headers............
-  // Always add X to Custom headers..........
-  res.setHeader("X-Name","manisQaure");
-  return res.json(shopping.ShoppingItems);
-})
-userRouter.get('/user/api/job',(req,res,next)=>{
-  return res.json(job.JobIems);
-})
-userRouter.get('/user/api/home',(req,res,next)=>{
-  return res.json(home.homeItems);
-})
-userRouter.get('/user/api/notification',(req,res,next)=>{
-  return res.json(notification.notificationsItems);
-})
-userRouter.get('/user/api/currentnotifs',(req,res,next)=>{
-  return res.json(currentnotifs.currentnotifsItems);
-})
-userRouter.get('/user/api/game',(req,res,next)=>{
-  return res.json(game.gameItems);
-})
+
+// Create a home routing handler
+userRouter.get('/home',handleGetAllHome)
+// Create a Shopping routing hndler
+userRouter.get('/shopping',handleGetAllShopping)
+// Create a Job routing handler
+userRouter.get('/job',handleGetAllJob)
+// Create a Notification handler
+userRouter.get('/notification',handleGetAllNotifs)
+// Create a Current Notification handler
+userRouter.get('/currentnotifs',handleGetAllCrrnotifs)
+// Create a Game Routing Handler......
+userRouter.get('/game',handleGetAllGame)
 
 
 
 
 
-
+// Export userRouter......Module........
 module.exports = userRouter;

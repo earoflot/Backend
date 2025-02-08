@@ -23,13 +23,14 @@ connectMongoDb("mongodb://127.0.0.1:27017/loginUser").then(() => console.log("Mo
 // Middleware -- Plugin........
 // it is the log file and add the run time data..on the file
 app.use(express.urlencoded({ extended: false}));
+app.use(express.json())
 app.use(logReqRes("log.txt"))
 
 // Router use of host address initialise..........
 // host address .api.......
 app.use("/host",hostRouter);
 // user address api
-app.use(userRouter)
+app.use("/api/user/",userRouter)
 
 
 const port = process.env.PORT || 3000;
