@@ -15,6 +15,7 @@ const userLogin = require("../models/userLonginSchema")
 // USERS ROUTERS..............
 
 // Create a async fucntion on awite to find the data on useLogin database
+
 async function handleGetAllUsers(req,res){
   const allDBlogin = await userLogin.find({})
   return res.json(allDBlogin)
