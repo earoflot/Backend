@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 //............................IMPORT STYTMENTS........................
 
 // Create a Data Base Schema............
-const olnotiSchema = new mongoose.Schema({
+const notifsSchema = new mongoose.Schema({
   title: {
     type: String,
     require: true,
@@ -17,6 +17,6 @@ const olnotiSchema = new mongoose.Schema({
 },{timestamps:true})
 
 // // Create a new module userLongin Data Base Model.....
-const olnotiModel = mongoose.model("old_notifs",olnotiSchema );
+const notifsModel = mongoose.model("notifsUser",notifsSchema );
 // export moudle..........
-module.exports =  olnotiModel;
+module.exports =  notifsModel;

@@ -25,5 +25,6 @@ const userSchema = new mongoose.Schema({
 },{timestamps:true})
 // // Create a new module userLongin Data Base Model.....
 const userLogin = mongoose.model("users",userSchema );
+
 // export moudle..........
 module.exports =  userLogin;

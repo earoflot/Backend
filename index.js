@@ -22,11 +22,12 @@ const { default: mongoose } = require('mongoose');
 const app = express();
 
 // Connection ON MONGO DB 
-connectMongoDb("mongodb+srv://maniquare:E9mdXNWnfUkMEuBo@maniquare.6wfvh.mongodb.net/?retryWrites=true&w=majority&appName=maniQuare").then(() => console.log("Mongodb Connected"))
+// connectMongoDb("mongodb+srv://maniquare:E9mdXNWnfUkMEuBo@maniquare.6wfvh.mongodb.net/?retryWrites=true&w=majority&appName=maniQuare").then(() => console.log("Mongodb Connected"))
 
+connectMongoDb("mongodb://127.0.0.1:27017/").then(() => console.log("Mongodb Connected"))
 
-app.set("view engine","ejs")
-app.set('views',path.resolve("./views"))
+// app.set("view engine","ejs")
+// app.set('views',path.resolve("./views"))
 
 // Middleware -- Plugin........
 // it is the log file and add the run time data..on the file
@@ -36,7 +37,7 @@ app.use(logReqRes("log.txt"))
 
 // Router use of host address initialise..........
 // host address .api.......
-app.use("/",staticRouter);
+// app.use("/",staticRouter);
 
 app.use("/host",hostRouter);
 // user address api
